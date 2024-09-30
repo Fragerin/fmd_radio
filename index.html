@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Радио Станция FMD</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="left-header">
+                <div class="moscow-time">
+                    <span class="moscow">Московское время</span>
+                    <span class="eng">Moscow Time</span>
+                </div>
+            <div class="time-container">
+                <div class="time" id="clock">12:48</div>
+
+                <img src="/img/back_time.png" alt="Подложка под часы" class="time-bg">
+            </div>
+        </div>
+
+
+        <div class="logo">
+            <img src="img/logo.png" alt="FMD Лого" class="logo-img">
+        </div>
+
+        <div class="social-icons">
+            <a href="https://vk.com" target="_blank"><img src="img/vk.png" alt="VK"></a>
+            <a href="https://telegram.org" target="_blank"><img src="img/tg.png" alt="Telegram"></a>
+            <a href="https://dzen.ru" target="_blank"><img src="img/Dzen.png" alt="YouTube"></a>
+        </div>
+    </header>
+
+    <!-- Бегущая строка -->
+    <div class="marquee">
+        <span>Радио Famous Music Donbass. Если тебя нет в плейлистах FMD, то тебя нет нигде.</span>
+    </div>
+
+    <!-- Основной контент -->
+    <div class="content">
+
+        <!-- Player блок -->
+        <div class="player-block">
+            <h2>Сейчас играет:</h2>
+        <div class="now-playing-container">
+            <!-- Место для изображения альбома -->
+            <img src="img/default-album.png" alt="Альбом" id="album-cover" class="album-cover">
+
+            <div class="now-playing-info">
+
+
+
+                <div class="controls-container">
+        <img id="play-button" src="img/play.png" alt="Play" style="cursor: pointer;">
+       <!-- Название текущего трека -->
+    <p id="now-playing" class="track-title">Серёга Пират</p>
+
+                    <img id="volume-img" src="img/volume.png" alt="Volume";>
+
+                    <!-- Настройка громкости -->
+                    <input type="range" id="volume-control" min="0" max="100" value="50">
+                </div>
+            </div>
+        </div>
+
+    <!-- Визуализатор -->
+    <div class="visualizer">
+        <canvas class="my_visualizer" width="320" height="64"></canvas>
+    </div>
+</div>
+
+
+
+        <!-- Playlist блок -->
+        <div class="playlist-block">
+            <h3>Последние треки</h3>
+            <!-- Динамический трек-лист от MyRadio24 -->
+            <iframe src="https://myradio24.com/getlasttracks/fmd" width="100%" height="400px" frameborder="0"></iframe>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <!-- Установить свои ссылки!-->
+        <a href="rules.html" target="_blank">Правила радио</a>
+        <a href="agreement.pdf" download>Скачать соглашение на ротацию треков</a>
+    </footer>
+
+    <!-- JS Script -->
+    <script src="script.js"></script>
+    <script src="https://myradio24.com/player/player.js?v3.28" data-port="fmd" data-interval="15" data-vmid="0"></script>
+
+</body>
+</html>
